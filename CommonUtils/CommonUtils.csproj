@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,13 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -54,6 +63,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -62,6 +72,7 @@
     <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\AutoBackupProj\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -73,18 +84,19 @@
     <Compile Include="ConfigUtils\ConfigHelper.cs" />
     <Compile Include="EmailUtils\EmailConfig.cs" />
     <Compile Include="EmailUtils\EmailHelper.cs" />
-    <Compile Include="ExcelUtils\ExcelDemo.cs" />
-    <Compile Include="ExcelUtils\Helper\DataTableHelper.cs" />
-    <Compile Include="ExcelUtils\Helper\ExcelHelper.cs" />
-    <Compile Include="ExcelUtils\Model\ColumnEntity.cs" />
-    <Compile Include="ExcelUtils\Model\ExcelConfig.cs" />
-    <Compile Include="ExcelUtils\Model\ExportModel.cs" />
-    <Compile Include="ExcelUtils\Model\TemplateMode.cs" />
+    <Compile Include="NPIOExcelUtils\ExcelDemo.cs" />
+    <Compile Include="NPIOExcelUtils\Helper\DataTableHelper.cs" />
+    <Compile Include="NPIOExcelUtils\Helper\ExcelHelper.cs" />
+    <Compile Include="NPIOExcelUtils\Model\ColumnEntity.cs" />
+    <Compile Include="NPIOExcelUtils\Model\ExcelConfig.cs" />
+    <Compile Include="NPIOExcelUtils\Model\ExportModel.cs" />
+    <Compile Include="NPIOExcelUtils\Model\TemplateMode.cs" />
     <Compile Include="FileUtils\FileHelper.cs" />
     <Compile Include="FtpUtils\FtpConfig.cs" />
     <Compile Include="FtpUtils\FtpHelper.cs" />
     <Compile Include="LogUtils\LoggerHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinServiceUtils\WinServiceHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

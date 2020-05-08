@@ -63,6 +63,10 @@ namespace CommonUtils.FtpUtils
                 request.Abort();
                 request = null;
             }
+            if (Directory.Exists("temp"))
+            {
+                Directory.Delete("temp");
+            }
         }
 
         #endregion 构造函数
@@ -396,6 +400,40 @@ namespace CommonUtils.FtpUtils
             {
                 LoggerHelper.Error("获取【" + fileName + "】的最后修改时间失败", e);
                 return string.Empty;
+            }
+        }
+
+        public Stream GetStream(string remoteFileName)
+        {
+            if (!Directory.Exists("temp"))
+                Directory.CreateDirectory("temp");
+            response = Open(new Uri(ftpUri + remoteFileName), WebRequestMethods.Ftp.DownloadFile);
+            if (response == null) return null;
+            try
+            {
+                string tempPath = $"temp/{new DateTime().ToString()}";
+                using (FileStream outputStream = new FileStream(tempPath, FileMode.Create))
+                {
+                    using (Stream ftpStream = response.GetResponseStream())
+                    {
+                        long length = response.ContentLength;
+                        int bufferSize = 2048;
+                        int readCount;
+                        byte[] buffer = new byte[bufferSize];
+                        readCount = ftpStream.Read(buffer, 0, bufferSize);
+                        while (readCount > 0)
+                        {
+                            outputStream.Write(buffer, 0, readCount);
+                            readCount = ftpStream.Read(buffer, 0, bufferSize);
+                        }
+                    }
+                    return new FileStream(tempPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                }
+            }
+            catch (Exception e)
+            {
+                //LoggerHelper.Error("下载【" + remoteFileName + "】失败", e);
+                return null;
             }
         }
 

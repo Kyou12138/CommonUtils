@@ -40,7 +40,7 @@ namespace CommonUtils.ConfigUtils
             }
             catch (Exception e)
             {
-                LoggerHelper.Error(string.Format("读取{0}配置失败", configFilePath), e);
+                LoggerHelper.Error(string.Format("读取【{0}】配置失败", configFilePath), e);
                 throw e;
             }
         }
@@ -61,7 +61,7 @@ namespace CommonUtils.ConfigUtils
             }
             catch (Exception e)
             {
-                LoggerHelper.Error(string.Format("保存{0}配置失败", configFilePath), e);
+                LoggerHelper.Error(string.Format("保存【{0}】配置失败", configFilePath), e);
                 throw e;
             }
         }

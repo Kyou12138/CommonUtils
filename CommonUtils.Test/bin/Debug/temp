@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Connections>
+
+
+  <Connection name="SAA-1">
+    <CustomizationClass value="SAALoaderSim"/>
+    <LibraryType value="XSC"/>
+    <LibraryLocation value="SAALoaderSim.xsc"/>
+    <ConnectionMode value="Passive"/>
+    <DeviceID value="1"/>
+    <NetworkAddressLocal value="10.1.99.178"/>
+    <NetworkPortLocal value="9001"/>
+    <Protocol value="HSMS"/>
+    
+  </Connection>
+  
+  <Connection name="SAA-2">
+    <CustomizationClass value="SAALoaderSim"/>
+    <LibraryType value="XSC"/>
+    <LibraryLocation value="SAALoaderSim.xsc"/>
+    <ConnectionMode value="Passive"/>
+    <DeviceID value="2"/>
+    <NetworkAddressLocal value="10.1.99.178"/>
+    <NetworkPortLocal value="9002"/>
+    <Protocol value="HSMS"/>
+    
+  </Connection>
+
+</Connections>

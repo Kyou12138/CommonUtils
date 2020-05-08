@@ -77,6 +77,5 @@ namespace CommonUtils.FileUtils
                 return false;
             }
         }
-
     }
 }

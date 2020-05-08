@@ -29,3 +29,4 @@ D:\data\job\vsProjects\CommonUtils\CommonUtils.Test\obj\Debug\CommonUtils.Test.c
 D:\data\job\vsProjects\CommonUtils\CommonUtils.Test\obj\Debug\CommonUtils.Test.csproj.CopyComplete
 D:\data\job\vsProjects\CommonUtils\CommonUtils.Test\obj\Debug\CommonUtils.Test.dll
 D:\data\job\vsProjects\CommonUtils\CommonUtils.Test\obj\Debug\CommonUtils.Test.pdb
+D:\data\job\vsProjects\CommonUtils\CommonUtils.Test\bin\Debug\Config\Nidec.csv

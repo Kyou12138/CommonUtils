@@ -1,0 +1,81 @@
+﻿
+ 
+记录时间：2020-04-24 10:48:10,603 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【ftp://10.1.99.112//SAAConfig//B0110-1】FTP响应对象失败
+ 
+System.Net.WebException: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   在 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   在 System.Net.CommandStream.Dispose(Boolean disposing)
+   在 System.IO.Stream.Close()
+   在 System.IO.Stream.Dispose()
+   在 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   在 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   在 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   在 System.Net.FtpWebRequest.GetResponse()
+   在 CommonUtils.FtpUtils.FtpHelper.Open(Uri uri, String ftpMethod) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 93
+
+ 
+记录时间：2020-04-24 10:48:10,634 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【\SAAConfig\/B0110-1】的最后修改时间失败
+ 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 CommonUtils.FtpUtils.FtpHelper.GetLastModifyTime(String fileName, String format) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 393
+
+ 
+记录时间：2020-04-24 10:49:37,642 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【ftp://10.1.99.112//SAAConfig//B0110-1】FTP响应对象失败
+ 
+System.Net.WebException: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   在 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   在 System.Net.CommandStream.Dispose(Boolean disposing)
+   在 System.IO.Stream.Close()
+   在 System.IO.Stream.Dispose()
+   在 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   在 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   在 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   在 System.Net.FtpWebRequest.GetResponse()
+   在 CommonUtils.FtpUtils.FtpHelper.Open(Uri uri, String ftpMethod) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 93
+
+ 
+记录时间：2020-04-24 10:49:37,673 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【\SAAConfig\/B0110-1】的最后修改时间失败
+ 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 CommonUtils.FtpUtils.FtpHelper.GetLastModifyTime(String fileName, String format) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 393
+
+ 
+记录时间：2020-04-24 10:51:26,008 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【ftp://10.1.99.112//SAAConfig//B0110-1】FTP响应对象失败
+ 
+System.Net.WebException: 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+   在 System.Net.FtpWebRequest.SyncRequestCallback(Object obj)
+   在 System.Net.FtpWebRequest.RequestCallback(Object obj)
+   在 System.Net.CommandStream.Dispose(Boolean disposing)
+   在 System.IO.Stream.Close()
+   在 System.IO.Stream.Dispose()
+   在 System.Net.ConnectionPool.Destroy(PooledStream pooledStream)
+   在 System.Net.ConnectionPool.PutConnection(PooledStream pooledStream, Object owningObject, Int32 creationTimeout, Boolean canReuse)
+   在 System.Net.FtpWebRequest.FinishRequestStage(RequestStage stage)
+   在 System.Net.FtpWebRequest.GetResponse()
+   在 CommonUtils.FtpUtils.FtpHelper.Open(Uri uri, String ftpMethod) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 93
+
+ 
+记录时间：2020-04-24 10:51:37,054 
+线程ID:[12] 
+日志级别：  ERROR 
+错误描述：获取【\SAAConfig\/B0110-1】的最后修改时间失败
+ 
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 CommonUtils.FtpUtils.FtpHelper.GetLastModifyTime(String fileName, String format) 位置 D:\data\job\vsProjects\CommonUtils\CommonUtils\FtpUtils\FtpHelper.cs:行号 393
